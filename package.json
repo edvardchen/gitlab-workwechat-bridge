@@ -1,0 +1,51 @@
+{
+  "name": "gitlab-ww-bridge",
+  "version": "1.0.0",
+  "description": "gitbot for work wechat",
+  "main": "index.js",
+  "scripts": {
+    "watch": "concurrently --kill-others \"npm run build -- --watch --outDir .tmp\" \"nodemon --inspect .tmp/server.js\" ",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edvardchen/gitlab-ww-bridge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/got": "^9.6.1",
+    "@types/node": "^12.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "concurrently": "^4.1.1",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^4.3.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{tsx,ts}": [
+      "eslint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "fastify": "^2.6.0",
+    "fastify-reply-from": "^1.0.0",
+    "pino-pretty": "^3.2.0"
+  }
+}

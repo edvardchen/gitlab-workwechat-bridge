@@ -1,0 +1,869 @@
+{
+  "definitions": {},
+  "$id": "gitlab",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "object_kind",
+    "user",
+    "project",
+    "repository",
+    "object_attributes",
+    "labels",
+    "changes"
+  ],
+  "properties": {
+    "object_kind": {
+      "$id": "#/properties/object_kind",
+      "type": "string",
+      "default": "",
+      "pattern": "^(.*)$"
+    },
+    "user": {
+      "$id": "#/properties/user",
+      "type": "object",
+      "required": ["name", "username", "avatar_url"],
+      "properties": {
+        "name": {
+          "$id": "#/properties/user/properties/name",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "username": {
+          "$id": "#/properties/user/properties/username",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "avatar_url": {
+          "$id": "#/properties/user/properties/avatar_url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "project": {
+      "$id": "#/properties/project",
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "web_url",
+        "avatar_url",
+        "git_ssh_url",
+        "git_http_url",
+        "namespace",
+        "visibility_level",
+        "path_with_namespace",
+        "default_branch",
+        "homepage",
+        "url",
+        "ssh_url",
+        "http_url"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/project/properties/id",
+          "type": "integer",
+          "default": 0
+        },
+        "name": {
+          "$id": "#/properties/project/properties/name",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "description": {
+          "$id": "#/properties/project/properties/description",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "web_url": {
+          "$id": "#/properties/project/properties/web_url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "avatar_url": {
+          "$id": "#/properties/project/properties/avatar_url",
+          "type": "null",
+          "default": null
+        },
+        "git_ssh_url": {
+          "$id": "#/properties/project/properties/git_ssh_url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "git_http_url": {
+          "$id": "#/properties/project/properties/git_http_url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "namespace": {
+          "$id": "#/properties/project/properties/namespace",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "visibility_level": {
+          "$id": "#/properties/project/properties/visibility_level",
+          "type": "integer",
+          "default": 0
+        },
+        "path_with_namespace": {
+          "$id": "#/properties/project/properties/path_with_namespace",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "default_branch": {
+          "$id": "#/properties/project/properties/default_branch",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "homepage": {
+          "$id": "#/properties/project/properties/homepage",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "url": {
+          "$id": "#/properties/project/properties/url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "ssh_url": {
+          "$id": "#/properties/project/properties/ssh_url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "http_url": {
+          "$id": "#/properties/project/properties/http_url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "repository": {
+      "$id": "#/properties/repository",
+      "type": "object",
+      "required": ["name", "url", "description", "homepage"],
+      "properties": {
+        "name": {
+          "$id": "#/properties/repository/properties/name",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "url": {
+          "$id": "#/properties/repository/properties/url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "description": {
+          "$id": "#/properties/repository/properties/description",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "homepage": {
+          "$id": "#/properties/repository/properties/homepage",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "object_attributes": {
+      "$id": "#/properties/object_attributes",
+      "type": "object",
+      "required": [
+        "id",
+        "target_branch",
+        "source_branch",
+        "source_project_id",
+        "author_id",
+        "assignee_id",
+        "title",
+        "created_at",
+        "updated_at",
+        "milestone_id",
+        "state",
+        "merge_status",
+        "target_project_id",
+        "iid",
+        "description",
+        "source",
+        "target",
+        "last_commit",
+        "work_in_progress",
+        "url",
+        "action",
+        "assignee"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/object_attributes/properties/id",
+          "type": "integer",
+          "default": 0
+        },
+        "target_branch": {
+          "$id": "#/properties/object_attributes/properties/target_branch",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "source_branch": {
+          "$id": "#/properties/object_attributes/properties/source_branch",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "source_project_id": {
+          "$id": "#/properties/object_attributes/properties/source_project_id",
+          "type": "integer",
+          "default": 0
+        },
+        "author_id": {
+          "$id": "#/properties/object_attributes/properties/author_id",
+          "type": "integer",
+          "default": 0
+        },
+        "assignee_id": {
+          "$id": "#/properties/object_attributes/properties/assignee_id",
+          "type": "integer",
+          "default": 0
+        },
+        "title": {
+          "$id": "#/properties/object_attributes/properties/title",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "created_at": {
+          "$id": "#/properties/object_attributes/properties/created_at",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "updated_at": {
+          "$id": "#/properties/object_attributes/properties/updated_at",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "milestone_id": {
+          "$id": "#/properties/object_attributes/properties/milestone_id",
+          "type": "null",
+          "default": null
+        },
+        "state": {
+          "$id": "#/properties/object_attributes/properties/state",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "merge_status": {
+          "$id": "#/properties/object_attributes/properties/merge_status",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "target_project_id": {
+          "$id": "#/properties/object_attributes/properties/target_project_id",
+          "type": "integer",
+          "default": 0
+        },
+        "iid": {
+          "$id": "#/properties/object_attributes/properties/iid",
+          "type": "integer",
+          "default": 0
+        },
+        "description": {
+          "$id": "#/properties/object_attributes/properties/description",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "source": {
+          "$id": "#/properties/object_attributes/properties/source",
+          "type": "object",
+          "required": [
+            "name",
+            "description",
+            "web_url",
+            "avatar_url",
+            "git_ssh_url",
+            "git_http_url",
+            "namespace",
+            "visibility_level",
+            "path_with_namespace",
+            "default_branch",
+            "homepage",
+            "url",
+            "ssh_url",
+            "http_url"
+          ],
+          "properties": {
+            "name": {
+              "$id": "#/properties/object_attributes/properties/source/properties/name",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "description": {
+              "$id": "#/properties/object_attributes/properties/source/properties/description",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "web_url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/web_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "avatar_url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/avatar_url",
+              "type": "null",
+              "default": null
+            },
+            "git_ssh_url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/git_ssh_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "git_http_url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/git_http_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "namespace": {
+              "$id": "#/properties/object_attributes/properties/source/properties/namespace",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "visibility_level": {
+              "$id": "#/properties/object_attributes/properties/source/properties/visibility_level",
+              "type": "integer",
+              "default": 0
+            },
+            "path_with_namespace": {
+              "$id": "#/properties/object_attributes/properties/source/properties/path_with_namespace",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "default_branch": {
+              "$id": "#/properties/object_attributes/properties/source/properties/default_branch",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "homepage": {
+              "$id": "#/properties/object_attributes/properties/source/properties/homepage",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "ssh_url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/ssh_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "http_url": {
+              "$id": "#/properties/object_attributes/properties/source/properties/http_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "target": {
+          "$id": "#/properties/object_attributes/properties/target",
+          "type": "object",
+          "required": [
+            "name",
+            "description",
+            "web_url",
+            "avatar_url",
+            "git_ssh_url",
+            "git_http_url",
+            "namespace",
+            "visibility_level",
+            "path_with_namespace",
+            "default_branch",
+            "homepage",
+            "url",
+            "ssh_url",
+            "http_url"
+          ],
+          "properties": {
+            "name": {
+              "$id": "#/properties/object_attributes/properties/target/properties/name",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "description": {
+              "$id": "#/properties/object_attributes/properties/target/properties/description",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "web_url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/web_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "avatar_url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/avatar_url",
+              "type": "null",
+              "default": null
+            },
+            "git_ssh_url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/git_ssh_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "git_http_url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/git_http_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "namespace": {
+              "$id": "#/properties/object_attributes/properties/target/properties/namespace",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "visibility_level": {
+              "$id": "#/properties/object_attributes/properties/target/properties/visibility_level",
+              "type": "integer",
+              "default": 0
+            },
+            "path_with_namespace": {
+              "$id": "#/properties/object_attributes/properties/target/properties/path_with_namespace",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "default_branch": {
+              "$id": "#/properties/object_attributes/properties/target/properties/default_branch",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "homepage": {
+              "$id": "#/properties/object_attributes/properties/target/properties/homepage",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "ssh_url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/ssh_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "http_url": {
+              "$id": "#/properties/object_attributes/properties/target/properties/http_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "last_commit": {
+          "$id": "#/properties/object_attributes/properties/last_commit",
+          "type": "object",
+          "required": ["id", "message", "timestamp", "url", "author"],
+          "properties": {
+            "id": {
+              "$id": "#/properties/object_attributes/properties/last_commit/properties/id",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "message": {
+              "$id": "#/properties/object_attributes/properties/last_commit/properties/message",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "timestamp": {
+              "$id": "#/properties/object_attributes/properties/last_commit/properties/timestamp",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "url": {
+              "$id": "#/properties/object_attributes/properties/last_commit/properties/url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "author": {
+              "$id": "#/properties/object_attributes/properties/last_commit/properties/author",
+              "type": "object",
+              "required": ["name", "email"],
+              "properties": {
+                "name": {
+                  "$id": "#/properties/object_attributes/properties/last_commit/properties/author/properties/name",
+                  "type": "string",
+                  "default": "",
+                  "pattern": "^(.*)$"
+                },
+                "email": {
+                  "$id": "#/properties/object_attributes/properties/last_commit/properties/author/properties/email",
+                  "type": "string",
+                  "default": "",
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        },
+        "work_in_progress": {
+          "$id": "#/properties/object_attributes/properties/work_in_progress",
+          "type": "boolean",
+          "default": false
+        },
+        "url": {
+          "$id": "#/properties/object_attributes/properties/url",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "action": {
+          "$id": "#/properties/object_attributes/properties/action",
+          "type": "string",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "assignee": {
+          "$id": "#/properties/object_attributes/properties/assignee",
+          "type": "object",
+          "required": ["name", "username", "avatar_url"],
+          "properties": {
+            "name": {
+              "$id": "#/properties/object_attributes/properties/assignee/properties/name",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "username": {
+              "$id": "#/properties/object_attributes/properties/assignee/properties/username",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            },
+            "avatar_url": {
+              "$id": "#/properties/object_attributes/properties/assignee/properties/avatar_url",
+              "type": "string",
+              "default": "",
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "labels": {
+      "$id": "#/properties/labels",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/labels/items",
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "color",
+          "project_id",
+          "created_at",
+          "updated_at",
+          "template",
+          "description",
+          "type",
+          "group_id"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/labels/items/properties/id",
+            "type": "integer",
+            "default": 0
+          },
+          "title": {
+            "$id": "#/properties/labels/items/properties/title",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "color": {
+            "$id": "#/properties/labels/items/properties/color",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "project_id": {
+            "$id": "#/properties/labels/items/properties/project_id",
+            "type": "integer",
+            "default": 0
+          },
+          "created_at": {
+            "$id": "#/properties/labels/items/properties/created_at",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "updated_at": {
+            "$id": "#/properties/labels/items/properties/updated_at",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "template": {
+            "$id": "#/properties/labels/items/properties/template",
+            "type": "boolean",
+            "default": false
+          },
+          "description": {
+            "$id": "#/properties/labels/items/properties/description",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/labels/items/properties/type",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "group_id": {
+            "$id": "#/properties/labels/items/properties/group_id",
+            "type": "integer",
+            "default": 0
+          }
+        }
+      }
+    },
+    "changes": {
+      "$id": "#/properties/changes",
+      "type": "object",
+      "required": ["updated_by_id", "updated_at", "labels"],
+      "properties": {
+        "updated_by_id": {
+          "$id": "#/properties/changes/properties/updated_by_id",
+          "type": "array",
+          "items": {
+            "$id": "#/properties/changes/properties/updated_by_id/items",
+            "type": "null",
+            "default": null
+          }
+        },
+        "updated_at": {
+          "$id": "#/properties/changes/properties/updated_at",
+          "type": "array",
+          "items": {
+            "$id": "#/properties/changes/properties/updated_at/items",
+            "type": "string",
+            "default": "",
+            "pattern": "^(.*)$"
+          }
+        },
+        "labels": {
+          "$id": "#/properties/changes/properties/labels",
+          "type": "object",
+          "required": ["previous", "current"],
+          "properties": {
+            "previous": {
+              "$id": "#/properties/changes/properties/labels/properties/previous",
+              "type": "array",
+              "items": {
+                "$id": "#/properties/changes/properties/labels/properties/previous/items",
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "color",
+                  "project_id",
+                  "created_at",
+                  "updated_at",
+                  "template",
+                  "description",
+                  "type",
+                  "group_id"
+                ],
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/id",
+                    "type": "integer",
+                    "default": 0
+                  },
+                  "title": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/title",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "color": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/color",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "project_id": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/project_id",
+                    "type": "integer",
+                    "default": 0
+                  },
+                  "created_at": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/created_at",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "updated_at": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/updated_at",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "template": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/template",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "description": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/description",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "type": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/type",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "group_id": {
+                    "$id": "#/properties/changes/properties/labels/properties/previous/items/properties/group_id",
+                    "type": "integer",
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "current": {
+              "$id": "#/properties/changes/properties/labels/properties/current",
+              "type": "array",
+              "items": {
+                "$id": "#/properties/changes/properties/labels/properties/current/items",
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "color",
+                  "project_id",
+                  "created_at",
+                  "updated_at",
+                  "template",
+                  "description",
+                  "type",
+                  "group_id"
+                ],
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/id",
+                    "type": "integer",
+                    "default": 0
+                  },
+                  "title": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/title",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "color": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/color",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "project_id": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/project_id",
+                    "type": "integer",
+                    "default": 0
+                  },
+                  "created_at": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/created_at",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "updated_at": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/updated_at",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "template": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/template",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "description": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/description",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "type": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/type",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "group_id": {
+                    "$id": "#/properties/changes/properties/labels/properties/current/items/properties/group_id",
+                    "type": "integer",
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
