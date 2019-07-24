@@ -1,4 +1,4 @@
-# gitlab-ww-bridge
+# gitlab-workwechat-bridge
 
 实时转发 gitlab 通知到微信群里
 
