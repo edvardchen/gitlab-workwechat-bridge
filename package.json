@@ -1,7 +1,7 @@
 {
   "name": "gitlab-ww-bridge",
   "version": "1.0.0",
-  "description": "gitbot for work wechat",
+  "description": "forward gitlab events to work wechat bot",
   "main": "index.js",
   "scripts": {
     "watch": "concurrently --kill-others \"npm run build -- --watch --outDir .tmp\" \"nodemon --inspect .tmp/server.js\" ",
@@ -23,6 +23,8 @@
     "concurrently": "^4.1.1",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^4.3.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^7.5.0",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
     "nodemon": "^1.19.1",
@@ -40,6 +42,7 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
