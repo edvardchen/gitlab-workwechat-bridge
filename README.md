@@ -44,6 +44,6 @@ Webhook url: `http://your_host:5100/api/gitlab/:wechat_bot_key`
 
 目前只支持 `Merge Request` 通知
 
-## TODSO
+## TODO
 
 - 考虑以 docker image 发布
