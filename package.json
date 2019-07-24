@@ -1,6 +1,6 @@
 {
   "name": "gitlab-ww-bridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "forward gitlab notifications to work wechat group",
   "main": "index.js",
   "scripts": {
